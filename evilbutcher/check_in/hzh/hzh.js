@@ -149,7 +149,7 @@ function checkinfo() {
 
 function showmsg() {
   var count = $.datainfo.signInCount;
-  if ($.data.isSign == true) {
+  if ($.data.isSign != null && $.data.isSign == true) {
     $.log($.data);
     $.log($.datainfo);
     $.notify("华住会", "今日已签到🎉", `累计签到${count}天！`);
@@ -157,7 +157,7 @@ function showmsg() {
     point = $.data.point;
     $.log($.data);
     $.log($.datainfo);
-    $.notify("华住会", "签到成功🎉", `获得${point}积分，累计签到${count}天`);
+    $.notify("华住会", "签到成功🎉", `获得${point}积分，累计签到${count}天！`);
   }
 }
 
